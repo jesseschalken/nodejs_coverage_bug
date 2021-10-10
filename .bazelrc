@@ -1,0 +1,4 @@
+
+build --combined_report=lcov
+build --coverage_report_generator="@bazel_tools//tools/test/CoverageOutputGenerator/java/com/google/devtools/coverageoutputgenerator:Main"
+build --instrument_test_targets

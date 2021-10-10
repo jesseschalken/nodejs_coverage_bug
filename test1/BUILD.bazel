@@ -1,0 +1,19 @@
+load("@npm//@bazel/typescript:index.bzl", "ts_project")
+load("@npm//@bazel/jasmine:index.bzl", "jasmine_node_test")
+
+ts_project(
+    name = "lib",
+    srcs = glob(["*.ts"]),
+    declaration = True,
+    tsconfig = ":tsconfig.json",
+    deps = [
+        "@npm//c8",
+        "@npm//jasmine",
+        "@npm//@types/jasmine",
+    ],
+)
+
+jasmine_node_test(
+    name = "test",
+    deps = [":lib"],
+)

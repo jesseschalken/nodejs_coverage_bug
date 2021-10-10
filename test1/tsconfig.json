@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "sourceMap": false,
+    "composite": false,
+    // These paths point from this directory in the source tree
+    // to the directory a copy of this file that will end up in.
+    // See https://bazelbuild.github.io/rules_nodejs/TypeScript.html#ts_project-1
+    "rootDirs": [
+      ".",
+      "../bazel-out/host/bin/test1",
+      "../bazel-out/darwin-fastbuild/bin/test1",
+      "../bazel-out/darwin-dbg/bin/test1",
+      "../bazel-out/k8-fastbuild/bin/test1",
+      "../bazel-out/k8-dbg/bin/test1",
+      "../bazel-out/x64_windows-fastbuild/bin/test1",
+      "../bazel-out/x64_windows-dbg/bin/test1"
+    ]
+  },
+  "exclude": [
+    "external"
+  ]
+}
+  
